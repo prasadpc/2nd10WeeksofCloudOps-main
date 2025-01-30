@@ -11,12 +11,12 @@ pipeline {
         AWS_DEFAULT_REGION = 'us-east-1'
         REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/"
     }
-   # stages {
-    #    stage('Cleaning Workspace') {
-     #       steps {
-      #          cleanWs()
-       #     }
-        #}
+    stages {
+        stage('Cleaning Workspace') {
+            steps {
+                cleanWs()
+            }
+        }
         stage('Checkout from Git') {
             steps {
                 git branch: 'main', url: 'https://github.com/prasadpc/2nd10WeeksofCloudOps-main.git'
