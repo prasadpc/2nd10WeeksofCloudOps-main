@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "prasad-east-prasd"
+    bucket = "prasad-to-create"
     key    = "eks/terraform.tfstate"
     region = "us-east-1"
   }
